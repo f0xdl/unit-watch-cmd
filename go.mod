@@ -4,7 +4,6 @@ go 1.24.4
 
 require (
 	github.com/f0xdl/unit-watch-lib v0.1.0
-	github.com/google/uuid v1.6.0
 	github.com/rs/zerolog v1.34.0
 	github.com/urfave/cli/v2 v2.27.6
 )

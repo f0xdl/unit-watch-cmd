@@ -10,13 +10,13 @@ import (
 const DefaultPointName = "default"
 
 type IStorage interface {
-	CreateDevice(ctx context.Context, uuid string) error
-	SetActive(ctx context.Context, uuid string, active bool) error
-	UpdateExpires(ctx context.Context, uuid string, t time.Time) error
-	UpdateInfo(ctx context.Context, uuid, label, point string) error
+	CreateDevice(ctx context.Context, uid string) error
+	SetActive(ctx context.Context, uid string, active bool) error
+	UpdateExpires(ctx context.Context, uid string, t time.Time) error
+	UpdateInfo(ctx context.Context, uid, label, point string) error
 	CreateGroup(ctx context.Context, chatID int64) error
-	GetDevice(ctx context.Context, uuid string) (*domain.Device, error)
-	AssignGroups(ctx context.Context, uuid string, chatIds []int64) error
+	GetDevice(ctx context.Context, uid string) (*domain.Device, error)
+	AssignGroups(ctx context.Context, uid string, chatIds []int64) error
 }
 
 type UwCli struct {
